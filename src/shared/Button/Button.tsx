@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { StyledButton } from './styled';
 import { Link, Path } from 'react-router-dom';
 
@@ -11,11 +11,19 @@ interface PropsType {
     to?: string | Partial<Path>;
 }
 
-
-function Button({variant='primary', children, onClick, disabled, as='button', to}: PropsType) {
+function Button({
+    variant = 'primary',
+    children,
+    onClick,
+    disabled,
+    as = 'button',
+    to,
+}: PropsType) {
     return (
-        <StyledButton as={as} to={to} variant={variant} disabled={disabled} onClick={onClick}>{children}</StyledButton>
-    )
+        <StyledButton as={as} to={to} variant={variant} disabled={disabled} onClick={onClick}>
+            {children}
+        </StyledButton>
+    );
 }
 
-export default Button
+export default Button;

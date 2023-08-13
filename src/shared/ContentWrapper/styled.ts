@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledContentWrapper = styled.div`
-    background-color: ${({theme}) => theme.colors.lightWatermelon};
+    background-color: ${({ theme }) => theme.colors.lightWatermelon};
     border-radius: 12px;
     padding: 20px;
     flex-grow: 1;
@@ -10,4 +10,4 @@ export const StyledContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-`
+`;
