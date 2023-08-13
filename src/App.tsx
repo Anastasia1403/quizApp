@@ -8,18 +8,18 @@ import { theme } from './theme';
 import { GlobalStyle } from './theme/globalStyle';
 
 function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle/>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/quiz/:quizId" element={<QuizPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-    </ThemeProvider>
-  );
+    return (
+        <ThemeProvider theme={theme}>
+            <GlobalStyle />
+            <Routes>
+                <Route path='/' element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path='/quiz/:quizId' element={<QuizPage />} />
+                    <Route path='*' element={<NotFound />} />
+                </Route>
+            </Routes>
+        </ThemeProvider>
+    );
 }
 
 export default App;

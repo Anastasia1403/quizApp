@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const AnswerAcceptedWrapper = styled.div`
     font-family: 'Gudea';
@@ -8,5 +8,5 @@ export const AnswerAcceptedWrapper = styled.div`
     text-align: center;
     max-width: 50%;
     margin: auto;
-    color: ${({theme}) => theme.colors.blue};
+    color: ${({ theme }) => theme.colors.blue};
 `;

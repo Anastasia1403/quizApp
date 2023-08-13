@@ -6,5 +6,5 @@ export const MainBlock = styled.main`
     align-items: center;
     flex-grow: 1;
     padding: 20px;
-    background-color: ${({theme}) => theme.colors.lightYellow};
-`
+    background-color: ${({ theme }) => theme.colors.lightYellow};
+`;

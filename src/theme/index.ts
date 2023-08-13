@@ -1,4 +1,4 @@
-import { DefaultTheme } from "styled-components";
+import { DefaultTheme } from 'styled-components';
 
 export const theme: DefaultTheme = {
     colors: {
@@ -11,5 +11,5 @@ export const theme: DefaultTheme = {
         blue: '#263A7A',
         lightBlue: '#7284BD',
         white: '#FFFFFF',
-    }
-}
+    },
+};
