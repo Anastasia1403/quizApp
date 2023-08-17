@@ -23,7 +23,7 @@ function FinalQuizBlock({ result }: PropsType) {
             <FinalText>You have finished this quiz</FinalText>
             <FinalText>Your score is {score.toFixed(1)}%</FinalText>
             <FinalText>You can see your statistic in your dashboard</FinalText>
-            <Button variant='secondary' as={Link} to='/'>
+            <Button variant='secondary' tag={Link} to='/'>
                 Go To Profile
             </Button>
         </FinalQuizBlockWrapper>

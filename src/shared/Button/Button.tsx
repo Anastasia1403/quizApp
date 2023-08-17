@@ -7,8 +7,9 @@ interface PropsType {
     onClick?: () => void;
     disabled?: boolean;
     variant?: 'primary' | 'secondary';
-    as?: 'button' | 'a' | typeof Link;
+    tag?: 'button' | 'a' | typeof Link;
     to?: string | Partial<Path>;
+    className?: string;
 }
 
 function Button({
@@ -16,11 +17,19 @@ function Button({
     children,
     onClick,
     disabled,
-    as = 'button',
+    tag = 'button',
     to,
+    className,
 }: PropsType) {
     return (
-        <StyledButton as={as} to={to} variant={variant} disabled={disabled} onClick={onClick}>
+        <StyledButton
+            as={tag}
+            to={to}
+            variant={variant}
+            disabled={disabled}
+            onClick={onClick}
+            className={className}
+        >
             {children}
         </StyledButton>
     );

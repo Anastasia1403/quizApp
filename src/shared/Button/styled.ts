@@ -19,7 +19,6 @@ export const StyledButton = styled.button<{ variant: 'primary' | 'secondary' }>`
     width: fit-content;
     box-shadow: 0px 4px 4px rgba(38, 58, 122, 0.25);
     &:disabled {
-        /* background-color: ${({ theme }) => theme.colors.lightWatermelon}; */
         color: ${({ theme }) => theme.colors.lightWatermelon};
         cursor: not-allowed;
     }

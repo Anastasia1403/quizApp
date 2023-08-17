@@ -1,24 +1,25 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { QUIZ_LIST } from '../../helpers/mock';
 import Quiz from '../../components/Quiz';
 import Title from '../../shared/Title';
 import Button from '../../shared/Button';
 import Text from '../../shared/Text';
+import { useQuery } from '@tanstack/react-query';
+import { api } from '../../api';
 
-function QuizPage() {
+function QuizPage() {    
     const [isStarted, setIsStarted] = useState(false);
     const { quizId } = useParams<string>();
-    const quiz = QUIZ_LIST.find((quiz) => quiz.id === Number(quizId));
+    const { data: quiz } = useQuery({ queryKey: ['quiz'], queryFn: () => api.fetchOneQuiz(quizId) })
+
     return (
         <>
             {!isStarted ? (
                 <>
                     <Title>{quiz?.title}</Title>
-                    <Text centered>There is quiz description here.</Text>
-                    <Text centered>This quiz is about ...</Text>
+                    <Text centered>{quiz?.description}</Text>
                     <Text centered>It consists of {quiz?.questions.length} questions.</Text>
-                    <Text centered>Good luck!</Text>
+                    <Text centered marginBottom={20}>Good luck!</Text>
 
                     <Button onClick={() => setIsStarted(true)}>Start Quiz</Button>
                 </>
