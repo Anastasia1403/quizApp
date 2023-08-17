@@ -9,7 +9,7 @@ function Header() {
             </LogoLink>
             <Navbar>
                 <NavbarLink to='/'>Quizzes</NavbarLink>
-                <NavbarLink to='/'>Create new Quiz</NavbarLink>
+                <NavbarLink to='/new-quiz'>Create new Quiz</NavbarLink>
             </Navbar>
         </HeaderWrapper>
     );

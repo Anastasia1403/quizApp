@@ -1,4 +1,4 @@
-import { AnswerType } from '../../helpers/mock';
+import { AnswerType } from '../../types';
 import { Answer, StyledAnswersBlock } from './styled';
 
 interface PropsType {
@@ -12,9 +12,9 @@ function AnswersBlock({ answers, onClick, activeAnswer }: PropsType) {
         <StyledAnswersBlock>
             {answers.map((answer) => (
                 <Answer
-                    key={answer.id}
-                    isActive={Boolean(activeAnswer?.includes(answer.id))}
-                    onClick={() => onClick(answer.id)}
+                    key={answer._id}
+                    isActive={Boolean(activeAnswer?.includes(answer._id))}
+                    onClick={() => onClick(answer._id)}
                 >
                     {answer.text}
                 </Answer>

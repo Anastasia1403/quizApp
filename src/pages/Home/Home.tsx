@@ -1,15 +1,15 @@
 import QuizList from '../../components/QuizList';
 import Title from '../../shared/Title';
 import ContentWrapper from '../../shared/ContentWrapper/ContentWrapper';
-import { QuizzesWrapper } from './styled';
-import Button from '../../shared/Button';
+import { NewQuizButton, QuizzesWrapper } from './styled';
 import Text from '../../shared/Text';
+import { Link } from 'react-router-dom';
 
 function Home() {
     return (
         <>
             <Title>Quizzes Page</Title>
-            <Text centered>
+            <Text centered marginBottom={20} >
                 Hi! You are on the quizzes page. You can take an existence quiz or create your own
             </Text>
             <QuizzesWrapper>
@@ -19,13 +19,12 @@ function Home() {
                 </ContentWrapper>
                 <ContentWrapper>
                     <Title level='h3'>Custom Quizzes</Title>
-                    <Button
-                        onClick={() => {
-                            console.log('create new quiz');
-                        }}
-                    >
+                    <Text centered size={20}>
+                        It looks like you don’t have custom quizzes yet... What are waiting for?
+                    </Text>
+                    <NewQuizButton tag={Link} to='new-quiz'>
                         Create New Quiz
-                    </Button>
+                    </NewQuizButton>
                 </ContentWrapper>
             </QuizzesWrapper>
         </>

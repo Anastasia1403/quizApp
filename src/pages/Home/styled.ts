@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import ContentWrapper from '../../shared/ContentWrapper';
+import Button from '../../shared/Button';
 
 export const QuizzesWrapper = styled.div`
     display: grid;
@@ -14,3 +15,6 @@ export const QuizzesContent = styled(ContentWrapper)`
     flex-direction: column;
     align-items: center;
 `;
+export const NewQuizButton = styled(Button)`
+    margin-top: auto;
+`
