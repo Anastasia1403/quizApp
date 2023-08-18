@@ -12,6 +12,7 @@ export const Answer = styled.button<{ isActive: boolean }>`
     background-color: ${({ isActive, theme }) =>
         isActive ? theme.colors.blue : theme.colors.yellow};
     color: ${({ isActive, theme }) => (isActive ? '#ffffff' : theme.colors.blue)};
+    transform: ${({ isActive }) => (isActive && 'scale(1.05)' )};
     padding: 8px 16px;
     border-radius: 8px;
     font-size: 2rem;
@@ -19,4 +20,8 @@ export const Answer = styled.button<{ isActive: boolean }>`
     font-weight: 700;
     grid-row: 1 / 2;
     grid-column: 2 / 3;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.05);
+    }
 `;
