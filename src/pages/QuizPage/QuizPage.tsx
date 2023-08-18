@@ -6,12 +6,15 @@ import Button from '../../shared/Button';
 import Text from '../../shared/Text';
 import { useQuery } from '@tanstack/react-query';
 import { api } from '../../api';
+import { Loader } from '../../components/Loader/Loader';
 
 function QuizPage() {    
     const [isStarted, setIsStarted] = useState(false);
     const { quizId } = useParams<string>();
-    const { data: quiz } = useQuery({ queryKey: ['quiz'], queryFn: () => api.fetchOneQuiz(quizId) })
+    const { isLoading, data: quiz, isFetchedAfterMount } = useQuery({ queryKey: ['quiz'], queryFn: () => api.fetchOneQuiz(quizId) })
 
+    if (isLoading || !isFetchedAfterMount) return <Loader />
+    
     return (
         <>
             {!isStarted ? (

@@ -1,4 +1,4 @@
-import { HeaderWrapper, LogoLink, Navbar, NavbarLink } from './styled';
+import { HeaderWrapper, LinkText, LogoLink, Navbar, NavbarLink } from './styled';
 import { ReactComponent as Logo } from '../../assets/img/svg/logo.svg';
 
 function Header() {
@@ -8,8 +8,16 @@ function Header() {
                 <Logo />
             </LogoLink>
             <Navbar>
-                <NavbarLink to='/'>Quizzes</NavbarLink>
-                <NavbarLink to='/new-quiz'>Create new Quiz</NavbarLink>
+                <NavbarLink to='/'>
+                    <LinkText data-text="Quizzes">
+                        Quizzes
+                    </LinkText>
+                </NavbarLink>
+                <NavbarLink to='/new-quiz'>
+                    <LinkText data-text="New quiz"> 
+                        New quiz
+                    </LinkText>
+                </NavbarLink>
             </Navbar>
         </HeaderWrapper>
     );
